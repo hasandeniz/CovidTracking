@@ -12,6 +12,7 @@ The Covid Tracking App offers the following features:
 - Detailed Country Covid-19 Information: Users can view detailed information about the status of Covid-19, including cases, tests and deaths.
 - History: Users can see the historical data.
 - Share Details: Users can share the detailed information in selected country.
+- Turkish Localization Support: App supports both Turkish and English languages.
 
 ## Usage
 
