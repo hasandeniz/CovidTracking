@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hasandeniz.covidtracking.presentation.home.HomeFragment"
+        android:label="@string/covid_tracker" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.hasandeniz.covidtracking.presentation.detail.DetailFragment"
+        android:label="{name}" >
+        <action
+            android:id="@+id/action_detailFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.hasandeniz.covidtracking.presentation.history.HistoryFragment"
+        android:label="HistoryFragment" />
+</navigation>

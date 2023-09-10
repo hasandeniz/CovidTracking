@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Covid Takip</string>
+    <string name="covid_tracker">Covid Takip</string>
+    <string name="country">Ülke</string>
+    <string name="tests">Testler</string>
+    <string name="cases">Vakalar</string>
+    <string name="deaths">Ölümler</string>
+    <string name="history">Geçmiş</string>
+    <string name="search_for_a_country">Bir ülke arayın…</string>
+    <string name="country_details">Ülke Detayları</string>
+    <string name="total_cases_label">Toplam Vakalar: %1$s</string>
+    <string name="recovered_cases_label">İyileşen Vakalar: %1$s</string>
+    <string name="critical_cases_label">Kritik Vakalar: %1$s</string>
+    <string name="active_cases_label">Aktif Vakalar: %1$s</string>
+    <string name="new_cases_label">Yeni Vakalar: %1$s</string>
+    <string name="country_name_label">Ülke: %1$s</string>
+    <string name="population_label">Popülasyon: %1$s</string>
+    <string name="total_tests_label">Toplam Testler: %1$s</string>
+    <string name="new_deaths_label">Yeni Ölümler: %1$s</string>
+    <string name="total_deaths_label">Toplam Ölümler: %1$s</string>
+    <string name="country_label">"Ülke: %1$s, "</string>
+
+</resources>

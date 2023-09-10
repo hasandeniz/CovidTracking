@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Covid Tracker</string>
+    <string name="covid_tracker">Covid Tracker</string>
+    <string name="country">Country</string>
+    <string name="tests">Tests</string>
+    <string name="cases">Cases</string>
+    <string name="deaths">Deaths</string>
+    <string name="history">History</string>
+    <string name="search_for_a_country">Search for a country…</string>
+    <string name="country_details">Country Details</string>
+    <string name="total_cases_label">Total Cases: %1$s</string>
+    <string name="recovered_cases_label">Recovered Cases: %1$s</string>
+    <string name="critical_cases_label">Critical Cases: %1$s</string>
+    <string name="active_cases_label">Active Cases: %1$s</string>
+    <string name="new_cases_label">New Cases: %1$s</string>
+    <string name="country_name_label">Country: %1$s</string>
+    <string name="population_label">Population: %1$s</string>
+    <string name="total_tests_label">Total Tests: %1$s</string>
+    <string name="new_deaths_label">New Deaths: %1$s</string>
+    <string name="total_deaths_label">Total Deaths: %1$s</string>
+    <string name="country_label">"Country: %1$s, "</string>
+</resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="isSuccess"
+            type="Boolean" />
+
+        <variable
+            name="details"
+            type="com.hasandeniz.covidtracking.domain.model.CountryDetails" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.detail.DetailFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_detail"
+            android:visibility="@{isSuccess ? View.VISIBLE : View.GONE}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_country_details"
+                style="@style/DetailsTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_country_name"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/country_name_label(details.name)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_details"
+                tools:text="Country: Turkey" />
+
+            <TextView
+                android:id="@+id/tv_country_population"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/population_label(details.population)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_name"
+                tools:text="Population: 32985723985" />
+
+            <TextView
+                android:id="@+id/tv_country_cases"
+                style="@style/DetailsTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cases"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_population" />
+
+            <TextView
+                android:id="@+id/tv_new_cases"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/new_cases_label(details.cases.new)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_cases"
+                tools:text="New Cases: +2353" />
+
+            <TextView
+                android:id="@+id/tv_active_cases"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/active_cases_label(details.cases.active)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_new_cases"
+                tools:text="Active Cases: +2353" />
+
+            <TextView
+                android:id="@+id/tv_critical_cases"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/critical_cases_label(details.cases.critical)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_active_cases"
+                tools:text="Critical Cases: +2353" />
+
+            <TextView
+                android:id="@+id/tv_recovered_cases"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/recovered_cases_label(details.cases.recovered)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_critical_cases"
+                tools:text="Recovered Cases: +2353" />
+
+            <TextView
+                android:id="@+id/tv_total_cases"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/total_cases_label(details.cases.total)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_recovered_cases"
+                tools:text="Total Cases: +2353" />
+
+            <TextView
+                android:id="@+id/tv_country_tests"
+                style="@style/DetailsTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tests"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_cases" />
+
+            <TextView
+                android:id="@+id/tv_total_tests"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/total_tests_label(details.tests.total)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_tests"
+                tools:text="Total Tests: +2353" />
+
+            <TextView
+                android:id="@+id/tv_country_deaths"
+                style="@style/DetailsTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deaths"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_tests" />
+
+            <TextView
+                android:id="@+id/tv_new_deaths"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/new_deaths_label(details.deaths.new)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country_deaths"
+                tools:text="New Deaths: +2353" />
+
+            <TextView
+                android:id="@+id/tv_total_deaths"
+                style="@style/DetailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{@string/total_deaths_label(details.deaths.total)}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_new_deaths"
+                tools:text="Total Deaths: +2353" />
+
+            <Button
+                android:id="@+id/button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="168dp"
+                android:layout_height="77dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/history"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_country_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{isLoading ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Results couldn't be loaded"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Retry"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_error"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
